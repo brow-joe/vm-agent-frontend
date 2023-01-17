@@ -1,0 +1,13 @@
+<mat-card>
+    <mat-card-content>Upload File</mat-card-content>
+    <div *ngIf="loading">
+        <loader></loader>
+    </div>
+    <uploader
+        message="Click or drag xml here to upload"
+        [config]="config"
+        (onSending)="sending()"
+        (onError)="error()"
+        (onSuccess)="success()">
+    </uploader>
+</mat-card>
